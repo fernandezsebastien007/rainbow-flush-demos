@@ -1,3 +1,3 @@
 # Computer Game Demo
 
-Godot web export, beta 0.5.
+Godot web export, Beta 0.20.

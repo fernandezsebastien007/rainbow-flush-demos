@@ -148,11 +148,11 @@ const Preloader = /** @constructor */ function () { // eslint-disable-line no-un
 				return Promise.reject(new Error(`Failed loading file '${file}'`));
 			}
 			if (compressed) {
-				response = new Response(response.body.pipeThrough(new DecompressionStream('gzip')), {
-					headers: { 'Content-Type': 'application/wasm' },
-				});
-			}
-			const tr = getTrackedResponse(response, tracker[file]);
+                response = new Response(response.body.pipeThrough(new DecompressionStream('gzip')), {
+                    headers: { 'Content-Type': 'application/wasm' },
+                });
+            }
+            const tr = getTrackedResponse(response, tracker[file]);
 			if (raw) {
 				return Promise.resolve(tr);
 			}
